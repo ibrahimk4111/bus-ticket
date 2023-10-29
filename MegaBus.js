@@ -97,6 +97,11 @@ modal_container = document.getElementById("modal_container");
 
 function openModal () {
   modal_container.classList.add("open-modal-container")
+  subtotalField.innerText = "0";
+  vat.innerText = "0";
+  total.innerText = "0";
+  firstClassInput.value = 0;
+  economyClassInput.value = 0;
 }
 
 function closeModal () {
