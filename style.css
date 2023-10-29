@@ -1,0 +1,270 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+.bgImage{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100vh;
+    background:url("images/bus.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
+    background-size: cover;
+    z-index: -1;
+    filter: blur(5px);
+}
+
+.container{
+    max-width: 1200px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+nav{
+    height: 50px;
+    width: 100%;
+    padding: 20px 10px;
+}
+
+nav ul{
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+nav ul li a{
+    color: #fff;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    background: #000; 
+    border-radius: 5px;
+}
+
+nav ul li a:hover, a.active{
+    background-color: #52AF3A;
+    border-radius: 5px;
+}
+
+.main-content{
+    display: flex;
+    justify-content: space-evenly;
+    gap: 70px;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.booking-content{
+    color: #fff;
+    width: 80%;
+}
+.booking-content>p{
+    text-align: justify;
+}
+.booking-content h1{
+    font-size: 70px;
+    text-transform: uppercase;
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 500;
+}
+
+
+.booking-form{
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    width: 80%;
+}
+.booking-form h3{
+    margin: 5px 0px;
+}
+
+.inp-style{
+    width: 100%;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background: #F3F5FF;
+    border-radius: 4px;
+    margin: 10px 0;
+    outline: none;
+}
+
+.booking-form  .input-group{
+    margin: 5px 0;
+}
+.booking-form  .calculations{
+    margin: 5px 0;
+}
+.booking-form  .calculations p{
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.booking-form input{
+    width: 100%;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    background: #F3F5FF;
+    border-radius: 4px;
+    margin: 10px 0;
+}
+.booking-form .inputs{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.f-class{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.inp-width{
+    min-width: 100px;
+}
+.plus-minus-btn{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.1rem;
+}
+.buttonIcon{
+    cursor: pointer; 
+    padding:0px 2px; 
+    text-align: center;
+    border-radius: 5px;
+}
+.buttonIcon:hover{
+    background: #808080;
+    color: white;
+}
+.booking-btn{
+    display: block;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    font-weight: 500;
+    background-color:  #52AF3A;
+    cursor: pointer;
+}
+.amount{
+    display: flex;
+    justify-content: space-between;
+}
+
+.modal-container{
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    transform: scale(0);
+    transition: 300ms ease-in-out;
+}
+
+.open-modal-container{
+    transform: scale(1);
+    visibility: visible;
+}
+
+.modal{
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    opacity: 0.7;
+}
+
+.modal-content{
+    position: absolute;
+    background-color: white;
+    border-radius: 10px;
+    width: 400px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    box-shadow: 0px 0px 100px rgba(255, 255, 255, 0.708);
+}
+
+.paragraph{
+    font-size: 25px;
+}
+.ok{
+    text-align: center;
+    width: 100px;
+    line-height: 30px;
+    font-size: 18px;
+    background-color:  #52AF3A;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.ok:hover{
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.508);
+}
+
+.close_btn{
+    position: absolute;
+    border-radius: 10%;
+    text-align: center;
+    top: 5%;
+    right: 5%;
+    width: 50px;
+    line-height: 30px;
+    background: white;
+    z-index: 10;
+    cursor: pointer;
+}
+.close_btn:hover{
+    box-shadow: 0px 0px 50px rgba(255, 255, 255, 0.708);
+}
+
+@media only screen and (max-width: 800px) {
+    .container{
+        width: 100%;
+    }
+    nav{
+        height: 50px;
+        width: 100%;
+        padding: 20px 0px;
+    }
+    nav ul{
+        display: flex;
+        gap: 10px;
+        justify-content: space-evenly;
+    }
+    .booking-content h1{
+        font-size: 60px;
+        text-transform: uppercase;
+        font-family: 'Bebas Neue', cursive;
+        font-weight: 500;
+    }
+    .main-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 40px;
+        align-items: center;
+    }
+}
